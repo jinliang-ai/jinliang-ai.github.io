@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jin Liang</title>
+<meta name="description" content="Jin Liang — master's student in computer vision at the ZJU-UIUC Institute, Zhejiang University.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="life.html">Beyond Research</a>
+    <a href="files/Jin_Liang_CV.pdf">CV</a>
+  </nav>
+
+  <!-- ===== About ===== -->
+  <section class="intro">
+    <div class="intro-text">
+      <h1>Jin Liang <span class="pronouns">(he/him)</span></h1>
+      <p>
+        I am a master's student at the ZJU-UIUC Institute, Zhejiang University,
+        advised by Prof. Lin Yu. My research focuses on computer vision under real-world
+        constraints: images captured in poor conditions, and models that must run on
+        limited hardware such as vehicles and robots.
+      </p>
+      <p>
+        Previously, I received my B.S. in Electronic Engineering from Northeastern University.
+      </p>
+      <p class="highlight">I am applying for PhD programs starting in Fall 2027.</p>
+      <p class="links">
+        <a href="files/Jin_Liang_CV.pdf">CV</a>
+      </p>
+    </div>
+    <img class="avatar" src="images/profile.jpg" alt="Photo of Jin Liang">
+  </section>
+
+  <!-- ===== Research Interests ===== -->
+  <section>
+    <h2>Research Interests</h2>
+    <p>
+      I am interested in making visual perception reliable outside the lab. My current
+      interests include:
+    </p>
+    <ul>
+      <li><strong>Computer vision under degraded imaging</strong> — low-light enhancement, noise, and evaluation without ground truth.</li>
+      <li><strong>Efficient on-device perception</strong> — quantization and deployment on embedded and automotive hardware.</li>
+      <li><strong>Perception for robots</strong> — recognizing and tracking people over time in open, changing environments.</li>
+    </ul>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <img class="thumb" src="images/scania_teaser.jpg" alt="Low-light enhancement before and after">
+      <div class="project-text">
+        <h3>Native-Format Low-Light Enhancement for Automotive Cameras</h3>
+        <p class="meta">Industry collaboration with Scania &middot; ZJUI &middot; Jun 2026 – present</p>
+        <p>
+          Night-time images from vehicle camera monitor systems are dark and noisy, and the
+          enhancement has to run in real time on the vehicle. I built a lightweight
+          pipeline that works directly in the camera's native NV12 format and enhances
+          brightness only, which keeps the cost low. I added a base/detail decomposition to
+          reduce noise in dark flat regions, and designed an evaluation protocol that does
+          not need clean reference images. The model is quantized and deployed with the
+          Qualcomm QNN SDK.
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img class="thumb" src="images/reid_teaser.jpg" alt="Robot recognizing people">
+      <div class="project-text">
+        <h3>Lifelong Open-Set Person Re-Identification on a Quadruped Robot</h3>
+        <p class="meta">Research Intern &middot; Advanced Institute of Information Technology, Peking University &middot; Feb – Jun 2026</p>
+        <p>
+          I worked on a proactive companion robot system built on a Unitree Go2 quadruped.
+          I led the open-set identity module, which lets the robot recognize people it has
+          met before, notice people it has never seen, and keep learning new identities
+          over time. I also took part in other parts of the system.
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img class="thumb" src="images/llm_teaser.jpg" alt="LLM training curves">
+      <div class="project-text">
+        <h3>Building an LLM Training System from Scratch</h3>
+        <p class="meta">Self-directed project based on Stanford CS336 &middot; Sep 2025 – Jan 2026</p>
+        <p>
+          Following Stanford's CS336 course, I implemented the main parts of a language
+          model training system myself, from the tokenizer and Transformer model to the
+          training loop, to understand how large models are built and trained in practice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Publications ===== -->
+  <section>
+    <h2>Publications</h2>
+    <ul class="pubs">
+      <li>
+        Zhijiao Cao, <strong>Jin Liang</strong>, et al.
+        <em>[Paper title on angular-decoupled backscattering coefficient retrieval]</em>.
+        Under review.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Teaching ===== -->
+  <section>
+    <h2>Teaching</h2>
+    <ul>
+      <li>Teaching Assistant, PHYS 214 (Quantum Mechanics), ZJUI, Spring 2025</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Last updated: October 2026</p>
+  </footer>
+
+</main>
+<script src="placeholder.js"></script>
+</body>
+</html>
