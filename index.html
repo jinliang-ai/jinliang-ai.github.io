@@ -5,124 +5,216 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Jin Liang</title>
-<meta name="description" content="Jin Liang — master's student in computer vision at the ZJU-UIUC Institute, Zhejiang University.">
+<meta name="description" content="Jin Liang, master's student in computer vision at the ZJU-UIUC Institute, Zhejiang University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="page">
 
-  <nav class="nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="life.html">Beyond Research</a>
-    <a href="files/Jin_Liang_CV.pdf">CV</a>
-  </nav>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#top">Jin Liang</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#beyond">Beyond research</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page" id="top">
 
   <!-- ===== About ===== -->
   <section class="intro">
     <div class="intro-text">
-      <h1>Jin Liang <span class="pronouns">(he/him)</span></h1>
-      <p>
-        I am a master's student at the ZJU-UIUC Institute, Zhejiang University,
-        advised by Prof. Lin Yu. My research focuses on computer vision under real-world
-        constraints: images captured in poor conditions, and models that must run on
-        limited hardware such as vehicles and robots.
+      <h1>Jin Liang <span class="pronouns">he/him</span></h1>
+      <p class="role">
+        Master's student at the ZJU-UIUC Institute, Zhejiang University
       </p>
       <p>
-        Previously, I received my B.S. in Electronic Engineering from Northeastern University.
+        I work on computer vision under real-world constraints: images captured in poor
+        conditions, and models that must run on limited hardware such as vehicles and
+        robots. I am advised by Prof. Yu Lin. Before this, I received my B.S. in
+        Electronic Information Engineering from Northeastern University.
       </p>
-      <p class="highlight">I am applying for PhD programs starting in Fall 2027.</p>
-      <p class="links">
-        <a href="files/Jin_Liang_CV.pdf">CV</a>
-      </p>
+      <p class="status"><span class="lamp" aria-hidden="true"></span>Applying for PhD programs starting in Fall 2027</p>
     </div>
-    <img class="avatar" src="images/profile.jpg" alt="Photo of Jin Liang">
+    <img class="avatar" src="images/avatar_full.jpg" alt="Photo of Jin Liang">
   </section>
 
   <!-- ===== Research Interests ===== -->
   <section>
-    <h2>Research Interests</h2>
-    <p>
-      I am interested in making visual perception reliable outside the lab. My current
-      interests include:
-    </p>
-    <ul>
-      <li><strong>Computer vision under degraded imaging</strong> — low-light enhancement, noise, and evaluation without ground truth.</li>
-      <li><strong>Efficient on-device perception</strong> — quantization and deployment on embedded and automotive hardware.</li>
-      <li><strong>Perception for robots</strong> — recognizing and tracking people over time in open, changing environments.</li>
-    </ul>
+    <h2>Research interests</h2>
+    <dl class="interests">
+      <div>
+        <dt>Computer vision</dt>
+        <dd>Image restoration and enhancement, computational imaging, robust perception, and multimodal learning.</dd>
+      </div>
+      <div>
+        <dt>Embodied AI and robotic perception</dt>
+        <dd>Open-set recognition, person re-identification and tracking, vision-language models, and real-time systems.</dd>
+      </div>
+      <div>
+        <dt>Efficient AI systems</dt>
+        <dd>Model compression and quantization, on-device and edge inference, hardware-aware machine learning, and LLM training and inference systems.</dd>
+      </div>
+    </dl>
   </section>
 
   <!-- ===== Projects ===== -->
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-      <img class="thumb" src="images/scania_teaser.jpg" alt="Low-light enhancement before and after">
-      <div class="project-text">
-        <h3>Native-Format Low-Light Enhancement for Automotive Cameras</h3>
-        <p class="meta">Industry collaboration with Scania &middot; ZJUI &middot; Jun 2026 – present</p>
-        <p>
-          Night-time images from vehicle camera monitor systems are dark and noisy, and the
-          enhancement has to run in real time on the vehicle. I built a lightweight
-          pipeline that works directly in the camera's native NV12 format and enhances
-          brightness only, which keeps the cost low. I added a base/detail decomposition to
-          reduce noise in dark flat regions, and designed an evaluation protocol that does
-          not need clean reference images. The model is quantized and deployed with the
-          Qualcomm QNN SDK.
-        </p>
-      </div>
-    </div>
+    <article class="project">
+      <h3>QuickDCE: native-format low-light enhancement for automotive cameras</h3>
+      <p class="meta"><span>Research project with Scania, advised by Prof. Yu Lin</span><span class="date">Jun 2026 – present</span></p>
 
-    <div class="project">
-      <img class="thumb" src="images/reid_teaser.jpg" alt="Robot recognizing people">
-      <div class="project-text">
-        <h3>Lifelong Open-Set Person Re-Identification on a Quadruped Robot</h3>
-        <p class="meta">Research Intern &middot; Advanced Institute of Information Technology, Peking University &middot; Feb – Jun 2026</p>
-        <p>
-          I worked on a proactive companion robot system built on a Unitree Go2 quadruped.
-          I led the open-set identity module, which lets the robot recognize people it has
-          met before, notice people it has never seen, and keep learning new identities
-          over time. I also took part in other parts of the system.
-        </p>
-      </div>
-    </div>
+      <figure class="demo">
+        <div class="demo-frame split">
+          <video src="videos/scania_demo.mp4" poster="images/scania_demo.jpg"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="Side-by-side video: original night footage on the left, enhanced on the right"></video>
+          <span class="demo-label left">Input</span>
+          <span class="demo-label right">Enhanced</span>
+        </div>
+        <figcaption>Night-time footage from a vehicle side camera.</figcaption>
+      </figure>
 
-    <div class="project">
-      <img class="thumb" src="images/llm_teaser.jpg" alt="LLM training curves">
-      <div class="project-text">
-        <h3>Building an LLM Training System from Scratch</h3>
-        <p class="meta">Self-directed project based on Stanford CS336 &middot; Sep 2025 – Jan 2026</p>
-        <p>
-          Following Stanford's CS336 course, I implemented the main parts of a language
-          model training system myself, from the tokenizer and Transformer model to the
-          training loop, to understand how large models are built and trained in practice.
-        </p>
-      </div>
-    </div>
+      <p>
+        Night-time images from vehicle camera monitor systems are dark and noisy, and the
+        enhancement has to run in real time on the vehicle. I built a lightweight
+        enhancement pipeline for this setting:
+      </p>
+      <ul>
+        <li>Works directly on the camera's native NV12 format and enhances luminance only, keeping the cost low.</li>
+        <li>Base/detail decomposition to suppress noise in dark flat regions.</li>
+        <li>Reference-free evaluation protocol; the model is quantized and deployed with the Qualcomm QNN SDK.</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <h3>Lifelong open-set person re-identification on an autonomous patrol robot</h3>
+      <p class="meta"><span>Advanced Institute of Information Technology, Peking University · Team lead: Dr. Zhao Wang</span><span class="date">Feb – Jun 2026</span></p>
+
+      <figure class="demo">
+        <div class="demo-frame">
+          <video src="videos/pku_demo.mp4" poster="images/pku_demo.jpg"
+                 autoplay muted loop playsinline preload="metadata"
+                 aria-label="System demo of the companion robot"></video>
+        </div>
+        <figcaption>System demo: open-world navigation, person following, and map-based navigation.</figcaption>
+      </figure>
+
+      <p>
+        I worked on a proactive companion robot system built on a Unitree Go2 quadruped.
+        I led the open-set identity module, which lets the robot recognize people it has
+        met before, notice people it has never seen, and keep learning new identities
+        over time. I also took part in other parts of the system.
+      </p>
+    </article>
+
+    <article class="project">
+      <h3>Building an LLM training system from scratch</h3>
+      <p class="meta"><span>Self-directed project based on Stanford CS336</span><span class="date">Sep 2025 – Jan 2026</span></p>
+
+      <figure class="demo">
+        <div class="figure-pair">
+          <img src="images/cs336_tokenizer.png" alt="Byte-pair tokenizer: a sentence is encoded into token IDs and decoded back to text">
+          <img src="images/cs336_transformer.png" alt="Transformer language model architecture and the structure of one pre-norm block">
+        </div>
+        <figcaption>A BPE tokenizer (left) and a pre-norm Transformer language model (right). Figures from Stanford CS336, Spring 2025, Lecture 1.</figcaption>
+      </figure>
+
+      <p>
+        Following Stanford's CS336 course, I implemented the main parts of a language
+        model training system myself, from the tokenizer and Transformer model to the
+        training loop, to understand how large models are built and trained in practice.
+      </p>
+    </article>
   </section>
 
-  <!-- ===== Publications ===== -->
-  <section>
-    <h2>Publications</h2>
-    <ul class="pubs">
-      <li>
-        Zhijiao Cao, <strong>Jin Liang</strong>, et al.
-        <em>[Paper title on angular-decoupled backscattering coefficient retrieval]</em>.
-        Under review.
-      </li>
-    </ul>
-  </section>
+  <!-- ===== Beyond research ===== -->
+  <section id="beyond" class="beyond">
+    <h2>Beyond research</h2>
+    <p class="page-lede">
+      I believe a good life is more than work. Outside the lab, I spend my time reading,
+      teaching, and staying active.
+    </p>
 
-  <!-- ===== Teaching ===== -->
-  <section>
-    <h2>Teaching</h2>
-    <ul>
-      <li>Teaching Assistant, PHYS 214 (Quantum Mechanics), ZJUI, Spring 2025</li>
-    </ul>
+    <!-- Reading: text left, bookshelf right -->
+    <div class="story">
+      <div class="story-text">
+        <h3>Reading</h3>
+        <p>
+          I enjoy classic literature and have read nearly a hundred classic novels, most
+          of them in Chinese translation. I keep coming back to a few kinds of stories:
+          19th-century novels about people struggling against the society around them,
+          Russian novels that ask hard questions about conscience and freedom,
+          existentialist works, and dystopian novels such as <cite>1984</cite>.
+        </p>
+        <p>
+          I am also interested in philosophy. I have read a history of Western philosophy,
+          from Socrates and Plato through Descartes, Locke, and Hume to Kant and Hegel.
+          I am most drawn to Kant’s idea that every person should be treated as an end,
+          never merely as a means, which I first explored in depth through Michael
+          Sandel’s Harvard course <em>Justice</em>. I also enjoy existentialist thinkers
+          such as Kierkegaard, Nietzsche, and Sartre.
+        </p>
+      </div>
+      <figure class="story-photo books">
+        <img src="images/life/books.png" alt="Covers of Les Misérables, The Brothers Karamazov, War and Peace, Don Quixote, The Stranger and 1984">
+        <figcaption>A few novels I keep returning to.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Tutoring: illustration left, text right -->
+    <div class="story flip">
+      <div class="story-text">
+        <h3>Tutoring and giving back</h3>
+        <p>
+          I try to be there for people when life gets hard. Over the years, I have
+          supported at least <strong>6</strong> classmates and students through some of the hardest
+          periods of their lives, including struggles with depression. Mostly this meant
+          being present: long chats, late-night phone calls, and listening more than talking.
+        </p>
+        <p>
+          In my spare time, I also tutor children in their schoolwork. Explaining an idea to
+          someone else is often how I find out whether I really understand it.
+        </p>
+        <p>
+          I also donate blood. It is a small thing, but it is one of the simplest ways I
+          know to help a stranger.
+        </p>
+      </div>
+      <figure class="story-photo illustration">
+        <img src="images/life/support.jpg" alt="Two-panel line drawing: one person sits slumped under a dark cloud while a friend talks with him; in the second panel the cloud is gone and both are smiling">
+        <figcaption>Illustration: being there for someone who is going through a hard time.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Sports: text left, photo right -->
+    <div class="story">
+      <div class="story-text">
+        <h3>Sports</h3>
+        <p>
+          I love running, basketball, cycling, swimming, and strength training. In
+          college, I won third place at the Northeastern University Track and Field Team Contest in 2021.
+        </p>
+        <dl class="times">
+          <div><dt>800 m</dt><dd>2:20</dd></div>
+          <div><dt>1000 m</dt><dd>3:15</dd></div>
+        </dl>
+      </div>
+      <figure class="story-photo">
+        <img src="images/life/sports.jpg" alt="Jin Liang holding a trophy at a university track meet">
+        <figcaption>At a university track meet.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <footer>
-    <p>Last updated: October 2026</p>
+    <p>Last updated October 2026</p>
   </footer>
 
 </main>
